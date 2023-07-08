@@ -22,8 +22,6 @@ const getAll = async (req, res, next) => {
     res.status(200).json(favorite ? filterFavorite : result);
 };
 
-
-
 const getById = async (req, res, next) => {
     const { id } = req.params;
     const result = await Contact.findById(id);
